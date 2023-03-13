@@ -19,8 +19,13 @@ Route::get('/', function () {
 });
 
 Route::get('/',\App\Http\Livewire\HomeComponent::class)->name('home.index');
+
 Route::get('/shop',\App\Http\Livewire\ShopComponent::class)->name('shop');
+
+Route::get('/product/{slug}',\App\Http\Livewire\DetailsComponent::class)->name('product.details');
+
 Route::get('/cart',\App\Http\Livewire\CartComponent::class)->name('shop.cart');
+
 Route::get('/checkout',\App\Http\Livewire\CheckoutComponent::class)->name('shop.checkout');
 
 //Route::get('/dashboard', function () {
